@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://muhammadfuadin385-kelvin.github.io/internet-explorer/sitemap.xml
