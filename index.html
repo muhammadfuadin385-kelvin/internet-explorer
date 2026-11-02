@@ -3,9 +3,12 @@
 <html lang="id">
 
 <head>
-    <meta name="google-site-verification" content="XWLoJxNkoaQBDhSgtcjkoI0xU3aWRo1C-rMS_1YdP0w" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification"
+    content="XWLoJxNkoaQBDhSgtcjkoI0xU3aWRo1C-rMS_1YdP0w">
 
     <!-- SEO Dasar -->
     <title>Internet Explorer | Belajar Sejarah dan Teknologi Internet</title>
@@ -70,6 +73,7 @@
         <a href="#protokol">Protokol</a>
         <a href="#cara-kerja">Cara Kerja</a>
         <a href="#keamanan">Keamanan</a>
+        <a href="#quiz">Quiz</a>
     </nav>
 
     <!-- KONTEN UTAMA -->
@@ -123,6 +127,7 @@
 
             <p>
                 Internet (lakuran bahasa Inggris dari interconnected network; arti harfiah: "jaringan bersambung") adalah sistem jaringan komputer yang saling terhubung secara global dengan menggunakan paket protokol internet (TCP/IP) untuk menghubungkan perangkat di seluruh dunia. Ini adalah jaringan dari jaringan yang terdiri dari jaringan privat, publik, akademik, bisnis, dan pemerintah lokal ke lingkup global, dihubungkan oleh beragam teknologi elektronik, nirkabel, dan jaringan optik. Internet membawa beragam sumber daya dan layanan informasi, seperti dokumen hiperteks yang saling terkait dan aplikasi World Wide Web (WWW), surat elektronik, telepon, dan berbagi berkas.
+            </p>
         </section>
 
         <!-- SEJARAH -->
@@ -203,8 +208,12 @@
                 <!-- TOKOH 1 -->
                 <article class="tokoh-card">
                     <img src="images/tokoh/Portrait_of_J._C._R._Licklider.jpg"
-                         alt="Foto J.C.R. Licklider">
-
+                         alt="Foto J.C.R. Licklider"
+                         loading="lazy"
+                         decoding="async"
+                         width="661"
+                         height="882"
+                    >
                     <div class="tokoh-info">
                         <h3>J.C.R. Licklider</h3>
                         <span>1915–1990</span>
@@ -221,9 +230,14 @@
 
                 <!-- TOKOH 2 -->
                 <article class="tokoh-card">
-                    <img src="images/tokoh/Kleinrock_headshot.png"
-                         alt="Foto Leonard Kleinrock">
-
+                    <img 
+                         src="images/tokoh/Kleinrock_headshot.png"
+                         alt="Foto Leonard Kleinrock"
+                         loading="lazy"
+                         decoding="async"
+                         width="710"
+                         height="700"
+                    >
                     <div class="tokoh-info">
                         <h3>Leonard Kleinrock</h3>
                         <span>1934</span>
@@ -239,9 +253,14 @@
 
                 <!-- TOKOH 3 -->
                 <article class="tokoh-card">
-                    <img src="images/tokoh/Vint_Cerf_-_2010.jpg"
-                         alt="Foto Vint Cerf">
-
+                    <img
+                         src="images/tokoh/Vint_Cerf_-_2010.jpg"
+                         alt="Potret Vint Cerf, salah satu pengembang TCP/IP"
+                         loading="lazy"
+                         decoding="async"
+                         width="2790"
+                         height="2791"
+                    >
                     <div class="tokoh-info">
                         <h3>Vint Cerf</h3>
                         <span>1943</span>
@@ -258,8 +277,12 @@
                 <!-- TOKOH 4 -->
                 <article class="tokoh-card">
                     <img src="images/tokoh/Sir_Tim_Berners-Lee.jpg"
-                         alt="Foto Tim Berners-Lee">
-
+                         alt="Foto Tim Berners-Lee"
+                         loading="lazy"
+                         decoding="async"
+                         width="1600"
+                         height="1066"
+                    >
                     <div class="tokoh-info">
                         <h3>Tim Berners-Lee</h3>
                         <span>1955</span>
@@ -276,8 +299,12 @@
                 <!-- TOKOH 5 -->
                 <article class="tokoh-card">
                     <img src="images/tokoh/Robert_E._Kahn.jpg"
-                         alt="Foto Robert Bob Kahn">
-
+                         alt="Foto Robert Bob Kahn"
+                         loading="lazy"
+                         decoding="async"
+                         width="153"
+                         height="195"
+                    >
                     <div class="tokoh-info">
                         <h3>Robert (Bob) Kahn</h3>
                         <span>1938</span>
@@ -668,6 +695,65 @@
 
         </section>
 
+        <!-- QUIZ INTERAKTIF -->
+        <section id="quiz" class="quiz-section">
+
+            <h2>🧠 Quiz Fundamental Internet</h2>
+
+            <p class="quiz-deskripsi">
+                Uji pemahamanmu tentang sejarah, jaringan,
+                protokol, dan teknologi internet.
+            </p>
+
+            <div class="quiz-container">
+
+                <div class="quiz-header">
+                    <span id="nomor-pertanyaan">
+                        Pertanyaan 1 dari 10
+                    </span>
+
+                    <span id="skor-sementara">
+                        Skor: 0
+                    </span>
+                </div>
+
+                <div class="quiz-progress">
+                    <div id="quiz-progress-bar"></div>
+                </div>
+
+                <h3 id="teks-pertanyaan">
+                    Pertanyaan akan muncul di sini.
+                </h3>
+
+                <div id="pilihan-jawaban"
+                    class="pilihan-jawaban">
+                </div>
+
+                <p id="feedback-jawaban"
+                aria-live="polite">
+                </p>
+
+                <button id="tombol-berikutnya"
+                        disabled>
+                    Pertanyaan Berikutnya
+                </button>
+
+                <div id="hasil-quiz" hidden>
+                    <h3>Quiz Selesai!</h3>
+                    <p id="nilai-akhir"></p>
+
+                    <button id="tombol-ulangi">
+                        Ulangi Quiz
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- AKHIR QUIZ INTERAKTIF -->
+
+    </main>
+
     <!-- FOOTER -->
     <footer class="footer">
 
@@ -742,6 +828,14 @@
     </button>
 
     <script src="js/script.js"></script>
+   
+    <!-- Cloudflare Web Analytics -->
+    <script
+        type="module"
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"4eb1e547591d4b048a76a6ba18c133f4"}'>
+    </script>
+    <!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>

@@ -883,3 +883,168 @@ nav a.aktif {
         text-align: center;
     }
 }
+
+/* =================================
+   QUIZ INTERAKTIF
+================================= */
+
+.quiz-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.quiz-deskripsi {
+    max-width: 650px;
+    margin: 10px auto 30px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+.quiz-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    text-align: left;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.quiz-progress {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    background: #e2e8f0;
+    border-radius: 20px;
+}
+
+#quiz-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#teks-pertanyaan {
+    margin-bottom: 20px;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+.pilihan-jawaban {
+    display: grid;
+    gap: 12px;
+}
+
+.pilihan-jawaban button {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #1e293b;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pilihan-jawaban button:hover:not(:disabled) {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.pilihan-jawaban button:disabled {
+    cursor: default;
+}
+
+.pilihan-jawaban button.benar {
+    border-color: #16a34a;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pilihan-jawaban button.salah {
+    border-color: #dc2626;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+#feedback-jawaban {
+    min-height: 28px;
+    margin: 18px 0;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+#tombol-berikutnya,
+#tombol-ulangi {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#tombol-berikutnya:hover:not(:disabled),
+#tombol-ulangi:hover {
+    background: #1d4ed8;
+}
+
+#tombol-berikutnya:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+#hasil-quiz {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #eff6ff;
+    text-align: center;
+}
+
+#hasil-quiz[hidden] {
+    display: none;
+}
+
+/* Aksesibilitas keyboard */
+.quiz-container button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .quiz-section {
+        padding: 40px 12px;
+    }
+
+    .quiz-container {
+        padding: 20px 15px;
+    }
+
+    .quiz-header {
+        font-size: 13px;
+    }
+
+    .pilihan-jawaban button {
+        font-size: 14px;
+    }
+}
