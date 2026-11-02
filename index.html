@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Belajar mengenal sejarah, teknologi, dan cara kerja internet.">
+
+    <title>Internet Explorer | Mengenal Dunia Internet</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER: Bagian atas website -->
+    <header>
+        <h1>INTERNET EXPLORER</h1>
+        <p>Jelajahi dunia teknologi dan jaringan internet.</p>
+    </header>
+
+    <!-- NAVIGASI: Menu website -->
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#tokoh">Tokoh</a>
+        <a href="#komponen">Komponen</a>
+        <a href="#protokol">Protokol</a>
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="#keamanan">Keamanan</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+
+        <!-- BERANDA -->
+        <section id="pencarian">
+
+            <h2>🔎 Cari Materi Internet</h2>
+
+            <p>
+                Temukan materi berdasarkan nama perangkat,
+                tokoh, protokol, atau keamanan internet.
+            </p>
+
+            <div class="pencarian-box">
+
+                <input
+                    type="text"
+                    id="input-pencarian"
+                    placeholder="Contoh: DNS, Router, Firewall..."
+                >
+
+                <button id="tombol-pencarian">
+                    Cari Materi
+                </button>
+
+                <button id="tombol-reset">
+                    Reset
+                </button>
+
+            </div>
+
+            <p id="hasil-pencarian">
+                Silakan masukkan kata kunci.
+            </p>
+
+        </section>
+
+        <section id="beranda">
+            <h2>Selamat Datang di Dunia Internet</h2>
+
+            <p>
+                Internet merupakan jaringan global yang menghubungkan
+                berbagai perangkat dan jaringan komputer di seluruh dunia.
+            </p>
+
+            <p>
+                Melalui website ini, kita akan mempelajari bagaimana
+                internet berkembang, siapa tokoh penting di baliknya,
+                serta bagaimana data dapat dikirim ke seluruh dunia.
+            </p>
+        </section>
+
+        <!-- SEJARAH -->
+        <section id="sejarah">
+
+            <h2>Sejarah Perkembangan Internet</h2>
+
+            <p>
+                Internet berkembang melalui penelitian jaringan komputer
+                selama beberapa dekade. Perkembangannya melibatkan ilmuwan,
+                insinyur, universitas, dan berbagai organisasi.
+            </p>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="tahun">(1969)</span>
+                    <h3>ARPANET</h3>
+                    <p>
+                        ARPANET mulai menghubungkan komputer di beberapa
+                        lembaga penelitian. Pada tahun ini terjadi pengiriman
+                        pesan awal melalui jaringan tersebut.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="tahun">(1974)</span>
+                    <h3>Konsep TCP</h3>
+                    <p>
+                        Vint Cerf dan Robert Kahn memublikasikan rancangan
+                        Transmission Control Protocol (TCP).
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="tahun">(1983)</span>
+                    <h3>Peralihan TCP/IP</h3>
+                    <p>
+                        ARPANET beralih menggunakan TCP/IP sebagai
+                        protokol komunikasi utama.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="tahun">(1989)</span>
+                    <h3>World Wide Web</h3>
+                    <p>
+                        Tim Berners-Lee mengusulkan sistem World Wide Web
+                        di CERN.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="tahun">(1991)</span>
+                    <h3>Web untuk Publik</h3>
+                    <p>
+                        World Wide Web mulai tersedia secara lebih luas
+                        untuk digunakan masyarakat.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TOKOH -->
+        <section id="tokoh">
+
+            <h2>Tokoh-Tokoh Penting Internet</h2>
+
+            <p>
+                Perkembangan internet bukan hasil karya satu orang.
+                Berikut beberapa tokoh yang memberikan kontribusi penting.
+            </p>
+
+            <div class="tokoh-container">
+
+                <!-- TOKOH 1 -->
+                <article class="tokoh-card">
+                    <img src="images/tokoh/Portrait_of_J._C._R._Licklider.jpg"
+                        alt="Foto J.C.R. Licklider">
+
+                    <div class="tokoh-info">
+                        <h3>J.C.R. Licklider</h3>
+                        <span>1915–1990</span>
+                        <p>
+                            Mengembangkan gagasan jaringan komputer
+                            global yang dapat menghubungkan manusia
+                            dan informasi.
+                        </p>
+                        <small>
+                            Foto: Wikimedia Commons — Public Domain
+                        </small>
+                    </div>
+                </article>
+
+                <!-- TOKOH 2 -->
+                <article class="tokoh-card">
+                    <img src="images/tokoh/Kleinrock_headshot.png"
+                         alt="Foto Leonard Kleinrock">
+
+                    <div class="tokoh-info">
+                        <h3>Leonard Kleinrock</h3>
+                        <span>1934–sekarang</span>
+                        <p>
+                            Berkontribusi pada teori packet switching
+                            dan perkembangan awal ARPANET.
+                        </p>
+                        <small>
+                            Foto: TippyZora — CC BY-SA 4.0
+                        </small>
+                    </div>
+                </article>
+
+                <!-- TOKOH 3 -->
+                <article class="tokoh-card">
+                    <img src="images/tokoh/Vint_Cerf_-_2010.jpg"
+                         alt="Foto Vint Cerf">
+
+                    <div class="tokoh-info">
+                        <h3>Vint Cerf</h3>
+                        <span>1943–sekarang</span>
+                        <p>
+                            Bersama Bob Kahn mengembangkan
+                            dasar protokol TCP/IP.
+                        </p>
+                        <small>
+                            Foto: Veni Markovski — CC BY 3.0
+                        </small>
+                    </div>
+                </article>
+
+                <!-- TOKOH 4 -->
+                <article class="tokoh-card">
+                    <img src="images/tokoh/Sir_Tim_Berners-Lee.jpg"
+                         alt="Foto Tim Berners-Lee">
+                    <div class="tokoh-info">
+                        <h3>Tim Berners-Lee</h3>
+                        <span>1955–sekarang</span>
+                        <p>
+                            Menciptakan World Wide Web,
+                            termasuk konsep URL, HTTP, dan HTML.
+                        </p>
+                        <small>
+                            Foto: Paul Clarke — CC BY-SA 4.0
+                        </small>
+                    </div>
+                </article>
+
+                <!-- TOKOH 5 -->
+                <article class="tokoh-card">
+                    <img src="images/tokoh/Robert_E._Kahn.jpg"
+                         alt="Foto Robert Bob Kahn">
+
+                    <div class="tokoh-info">
+                        <h3>Robert (Bob) Kahn</h3>
+                        <span>1938–sekarang</span>
+                        <p>
+                            Bersama Vint Cerf berkontribusi
+                            dalam rancangan protokol TCP/IP.
+                        </p>
+                        <small>
+                            Foto: Paul Morse / U.S. Government — Public Domain
+                        </small>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- KOMPONEN -->
+        <section id="komponen">
+            <h2>Komponen Pembentuk Internet</h2>
+
+            <p>
+                Internet terdiri dari berbagai perangkat dan
+                teknologi yang saling terhubung untuk mengirimkan
+                serta menerima informasi.
+            </p>
+
+            <div class="komponen-container">
+
+                <article class="komponen-card">
+                    <h3>💻 Komputer / Client</h3>
+                    <p>
+                        Perangkat yang digunakan pengguna untuk
+                        mengakses internet, seperti laptop,
+                        komputer, dan smartphone.
+                    </p>
+                </article>
+
+                <article class="komponen-card">
+                    <h3>📡 Router</h3>
+                    <p>
+                        Perangkat yang mengarahkan paket data
+                        menuju jaringan atau tujuan yang tepat.
+                    </p>
+                </article>
+
+                <article class="komponen-card">
+                    <h3>🔌 Switch</h3>
+                    <p>
+                        Perangkat yang menghubungkan beberapa
+                        perangkat dalam jaringan lokal (LAN).
+                    </p>
+                </article>
+
+                <article class="komponen-card">
+                    <h3>🌐 Modem</h3>
+                    <p>
+                        Perangkat yang membantu menghubungkan
+                        jaringan pengguna dengan layanan penyedia
+                        internet sesuai teknologi koneksinya.
+                    </p>
+                </article>
+
+                <article class="komponen-card">
+                    <h3>🖥️ Server</h3>
+                    <p>
+                        Komputer yang menyediakan layanan,
+                        aplikasi, dan data kepada perangkat lain.
+                    </p>
+                </article>
+
+                <article class="komponen-card">
+                    <h3>🛡️ Firewall</h3>
+                    <p>
+                        Sistem keamanan yang mengatur lalu lintas
+                        jaringan berdasarkan aturan tertentu.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="diagram-jaringan">
+
+                <h3>Visualisasi Topologi Jaringan Internet</h3>
+
+                <p>
+                    Pilih salah satu perangkat untuk mengetahui
+                    fungsi dan perannya dalam jaringan.
+                </p>
+
+                <div class="jaringan-alur">
+
+                    <button class="perangkat-jaringan aktif"
+                        data-judul="Client / Komputer"
+                        data-isi="Client merupakan perangkat pengguna yang mengirim permintaan untuk mengakses layanan internet.">
+                        💻 Client
+                    </button>
+
+                    <span class="panah">↓</span>
+
+                    <button class="perangkat-jaringan"
+                        data-judul="Router"
+                        data-isi="Router mengarahkan paket data menuju jaringan atau tujuan yang sesuai.">
+                        📡 Router
+                    </button>
+
+                    <span class="panah">↓</span>
+
+                    <button class="perangkat-jaringan"
+                        data-judul="ISP"
+                        data-isi="ISP atau Internet Service Provider adalah perusahaan penyedia layanan akses internet.">
+                        🌐 ISP
+                    </button>
+
+                    <span class="panah">↓</span>
+
+                    <button class="perangkat-jaringan"
+                        data-judul="Server"
+                        data-isi="Server menerima permintaan dari client dan menyediakan data atau layanan yang diminta.">
+                        🖥️ Server
+                    </button>
+
+                </div>
+
+                <div class="informasi-perangkat">
+                    <h3 id="judul-perangkat">Client / Komputer</h3>
+                    <p id="isi-perangkat">
+                        Client merupakan perangkat pengguna yang
+                        mengirim permintaan untuk mengakses layanan internet.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARA KERJA -->
+        <section id="protokol">
+
+            <h2>Protokol dan Teknologi Internet</h2>
+
+            <p>
+                Protokol internet adalah aturan komunikasi
+                yang memungkinkan perangkat saling bertukar
+                informasi melalui jaringan.
+            </p>
+
+            <div class="protokol-container">
+
+                <article class="protokol-card">
+                    <h3>🌐 IP Address</h3>
+                    <p>
+                        IP Address adalah alamat numerik yang
+                        digunakan untuk mengidentifikasi
+                        perangkat pada jaringan IP.
+                    </p>
+                    <small>Contoh: 192.168.1.10</small>
+                </article>
+
+                <article class="protokol-card">
+                    <h3>🔎 DNS</h3>
+                    <p>
+                        DNS menerjemahkan nama domain menjadi
+                        alamat IP agar browser dapat menemukan
+                        server tujuan.
+                    </p>
+                    <small>Contoh: google.com</small>
+                </article>
+
+                <article class="protokol-card">
+                    <h3>📦 TCP/IP</h3>
+                    <p>
+                        Kumpulan protokol komunikasi yang
+                        menjadi dasar pengiriman data
+                        melalui internet.
+                    </p>
+                    <small>TCP dan IP memiliki tugas berbeda.</small>
+                </article>
+
+                <article class="protokol-card">
+                    <h3>🌍 HTTP</h3>
+                    <p>
+                        HTTP adalah protokol komunikasi yang
+                        digunakan browser dan server untuk
+                        bertukar informasi di Web.
+                    </p>
+                    <small>Contoh: http://example.com</small>
+                </article>
+
+                <article class="protokol-card">
+                    <h3>🔒 HTTPS</h3>
+                    <p>
+                        HTTPS adalah HTTP yang dilindungi
+                        enkripsi menggunakan TLS sehingga
+                        komunikasi lebih aman.
+                    </p>
+                    <small>Contoh: https://example.com</small>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="simulasi-browser">
+
+            <h2>Simulasi Cara Browser Membuka Website</h2>
+
+            <p>
+                Masukkan alamat website untuk mempelajari
+                proses yang terjadi ketika browser mengakses internet.
+            </p>
+
+            <div class="browser-simulasi">
+
+                <label for="alamat-website">Alamat website:</label>
+
+                <div class="input-browser">
+                    <input
+                        type="text"
+                        id="alamat-website"
+                        placeholder="Contoh: example.com"
+                    >
+
+                    <button id="tombol-buka-website">
+                        Buka Website
+                    </button>
+                </div>
+
+                <div id="hasil-simulasi" class="hasil-simulasi">
+
+                    <h3>Bagaimana prosesnya?</h3>
+
+                    <p>
+                        Masukkan alamat website, lalu klik
+                        tombol Buka Website.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="cara-kerja">
+
+            <h2>Bagaimana Internet Bekerja?</h2>
+
+            <p>
+                Klik tombol di bawah untuk melihat bagaimana
+                permintaan data berjalan dari komputer menuju server.
+            </p>
+
+            <div class="simulasi">
+
+                <div class="alur-data">
+                    <div class="node" id="node1">
+                        <span>💻</span>
+                        <h3>Komputer</h3>
+                    </div>
+
+                    <div class="panah">→</div>
+
+                    <div class="node" id="node2">
+                        <span>📡</span>
+                        <h3>Router</h3>
+                    </div>
+
+                    <div class="panah">→</div>
+
+                    <div class="node" id="node3">
+                        <span>🌐</span>
+                        <h3>DNS</h3>
+                    </div>
+
+                    <div class="panah">→</div>
+
+                    <div class="node" id="node4">
+                        <span>🛜</span>
+                        <h3>ISP</h3>
+                    </div>
+
+                    <div class="panah">→</div>
+
+                    <div class="node" id="node5">
+                        <span>🖥️</span>
+                        <h3>Server</h3>
+                    </div>
+
+                </div>
+
+                <button id="mulaiSimulasi">
+                    Mulai Simulasi
+                </button>
+
+                <p id="statusSimulasi">
+                    Tekan tombol untuk memulai perjalanan data.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEAMANAN -->
+        <section id="keamanan">
+
+            <h2>Keamanan Internet dan Cybersecurity</h2>
+
+            <p>
+                Keamanan internet merupakan upaya melindungi
+                perangkat, jaringan, aplikasi, dan data dari
+                akses yang tidak sah serta ancaman digital.
+            </p>
+
+            <div class="keamanan-container">
+
+                <article class="keamanan-card">
+                    <h3>🛡️ Firewall</h3>
+                    <p>
+                        Firewall mengatur lalu lintas jaringan
+                        berdasarkan aturan keamanan untuk
+                        membantu mencegah koneksi yang tidak diizinkan.
+                    </p>
+                    <small>Contoh: Windows Defender Firewall.</small>
+                </article>
+
+                <article class="keamanan-card">
+                    <h3>🦠 Malware</h3>
+                    <p>
+                        Malware adalah perangkat lunak berbahaya
+                        yang dirancang untuk mengganggu,
+                        merusak, atau menyalahgunakan sistem.
+                    </p>
+                    <small>Contoh: virus, worm, dan trojan.</small>
+                </article>
+
+                <article class="keamanan-card">
+                    <h3>🎣 Phishing</h3>
+                    <p>
+                        Phishing adalah penipuan yang berusaha
+                        membuat seseorang memberikan informasi
+                        pribadi melalui pesan atau situs palsu.
+                    </p>
+                    <small>Contoh: pesan login palsu.</small>
+                </article>
+
+                <article class="keamanan-card">
+                    <h3>🔒 Enkripsi</h3>
+                    <p>
+                        Enkripsi mengubah informasi menjadi
+                        bentuk yang tidak mudah dibaca tanpa
+                        kunci yang sesuai.
+                    </p>
+                    <small>Contoh: enkripsi AES.</small>
+                </article>
+
+                <article class="keamanan-card">
+                    <h3>🌐 HTTPS</h3>
+                    <p>
+                        HTTPS melindungi komunikasi antara
+                        browser dan server menggunakan TLS.
+                    </p>
+                    <small>Contoh: https://example.com</small>
+                </article>
+
+                <article class="keamanan-card">
+                    <h3>🧰 Antivirus</h3>
+                    <p>
+                        Antivirus membantu mendeteksi,
+                        mencegah, dan menangani perangkat lunak
+                        berbahaya.
+                    </p>
+                    <small>Contoh: Microsoft Defender.</small>
+                </article>
+
+            </div>
+
+            <div class="tips-keamanan">
+
+                <h3>Tips Menjaga Keamanan Internet</h3>
+
+                <ul>
+                    <li>Gunakan kata sandi yang kuat dan unik.</li>
+                    <li>Aktifkan autentikasi dua faktor (2FA).</li>
+                    <li>Perbarui sistem operasi dan aplikasi.</li>
+                    <li>Hindari membuka tautan mencurigakan.</li>
+                    <li>Unduh software dari sumber resmi.</li>
+                    <li>Jangan membagikan kode OTP kepada orang lain.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    <!-- FOOTER -->
+    
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- IDENTITAS WEBSITE -->
+        <div class="footer-column">
+            <h2>🌐 INTERNET EXPLORER</h2>
+
+            <p>
+                Website edukasi untuk mengenal dunia internet,
+                sejarah, perangkat jaringan, protokol,
+                teknologi, dan keamanan digital.
+            </p>
+        </div>
+
+        <!-- NAVIGASI -->
+        <div class="footer-column">
+            <h3>Navigasi</h3>
+
+            <a href="#beranda">Beranda</a>
+            <a href="#sejarah">Sejarah Internet</a>
+            <a href="#tokoh">Tokoh Internet</a>
+            <a href="#komponen">Komponen Internet</a>
+            <a href="#keamanan">Keamanan Internet</a>
+        </div>
+
+        <!-- REFERENSI -->
+        <div class="footer-column">
+            <h3>Sumber Pembelajaran</h3>
+
+            <a href="https://www.internetsociety.org/"
+               target="_blank" rel="noopener noreferrer">
+                Internet Society
+            </a>
+
+            <a href="https://www.cloudflare.com/learning/"
+               target="_blank" rel="noopener noreferrer">
+                Cloudflare Learning
+            </a>
+
+            <a href="https://home.cern/science/computing/birth-web"
+               target="_blank" rel="noopener noreferrer">
+                CERN - Birth of the Web
+            </a>
+
+            <a href="https://www.w3.org/"
+               target="_blank" rel="noopener noreferrer">
+                World Wide Web Consortium
+            </a>
+        </div>
+
+    </div>
+
+    <!-- HAK CIPTA -->
+    <div class="footer-bottom">
+        <p>
+            © 2026 Internet Explorer.
+            Media Pembelajaran Teknologi Internet.
+        </p>
+
+        <p>
+            Dibuat untuk tujuan edukasi dan pembelajaran.
+        </p>
+    </div>
+
+    </footer>
+
+    
+    <button id="tombol-atas" title="Kembali ke atas">
+    ↑
+    </button>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

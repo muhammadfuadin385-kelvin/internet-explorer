@@ -1,0 +1,839 @@
+
+/* =================================
+   1. PENGATURAN DASAR WEBSITE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+/* =================================
+   2. HEADER WEBSITE
+================================= */
+
+header {
+    background: linear-gradient(135deg, #071b3a, #075985);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+    color: #cbdff5;
+}
+
+/* =================================
+   3. NAVIGASI WEBSITE
+================================= */
+
+nav {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #0284c7;
+}
+
+/* =================================
+   4. KONTEN UTAMA
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 22px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+    scroll-margin-top: 85px;
+}
+
+section h2 {
+    color: #075985;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+/* =================================
+   5. FOOTER
+================================= */
+
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px;
+}
+
+/* =================================
+   6. RESPONSIVE UNTUK HP
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+}
+
+/* =================================
+   SIMULASI CARA KERJA INTERNET
+================================= */
+
+.simulasi {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #eff6ff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.alur-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.node {
+    background-color: white;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 15px;
+    min-width: 100px;
+    transition: 0.3s;
+}
+
+.node span {
+    font-size: 32px;
+}
+
+.node h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.panah {
+    color: #0284c7;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.node.aktif {
+    background-color: #dbeafe;
+    border-color: #0284c7;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(2, 132, 199, 0.2);
+}
+
+#mulaiSimulasi {
+    background-color: #075985;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#mulaiSimulasi:hover {
+    background-color: #0284c7;
+}
+
+#mulaiSimulasi:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#statusSimulasi {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #075985;
+}
+
+@media (max-width: 600px) {
+    .alur-data {
+        flex-direction: column;
+    }
+
+    .panah {
+        transform: rotate(90deg);
+    }
+}
+
+/* =================================
+   TIMELINE SEJARAH INTERNET
+================================= */
+
+.timeline {
+    margin-top: 25px;
+    padding-left: 25px;
+    border-left: 4px solid #0284c7;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 5px 0 25px 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #0284c7;
+    border: 3px solid white;
+}
+
+.tahun {
+    display: inline-block;
+    color: #075985;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item h3 {
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+/* =================================
+   KARTU PROFIL TOKOH
+================================= */
+
+.tokoh-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(210px, 1fr)
+    );
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tokoh-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.tokoh-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.tokoh-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.tokoh-info {
+    padding: 18px;
+}
+
+.tokoh-info h3 {
+    color: #075985;
+    margin-bottom: 5px;
+}
+
+.tokoh-info span {
+    display: block;
+    color: #0284c7;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tokoh-info p {
+    font-size: 14px;
+}
+
+.tokoh-info small {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+.komponen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.komponen-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ed;
+    transition: 0.3s;
+}
+
+.komponen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.komponen-card h3 {
+    color: #075985;
+    margin-bottom: 12px;
+}
+
+.komponen-card p {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .komponen-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* DIAGRAM JARINGAN */
+
+.komponen-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.komponen-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ed;
+}
+
+.diagram-jaringan {
+    margin-top: 35px;
+    padding: 25px;
+    background: #eef6ff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.jaringan-alur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.perangkat-jaringan {
+    width: 220px;
+    padding: 15px;
+    border: 2px solid #0284c7;
+    border-radius: 10px;
+    background: white;
+    color: #075985;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.perangkat-jaringan:hover,
+.perangkat-jaringan.aktif {
+    background: #0284c7;
+    color: white;
+}
+
+.panah {
+    font-size: 25px;
+    color: #0284c7;
+}
+
+.informasi-perangkat {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.informasi-perangkat h3 {
+    color: #075985;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .komponen-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MATERI PROTOKOL INTERNET */
+
+.protokol-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.protokol-card {
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ed;
+    transition: 0.3s;
+}
+
+.protokol-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.protokol-card h3 {
+    color: #075985;
+    margin-bottom: 12px;
+}
+
+.protokol-card p {
+    line-height: 1.7;
+}
+
+.protokol-card small {
+    display: block;
+    margin-top: 12px;
+    color: #0284c7;
+}
+
+@media (max-width: 768px) {
+    .protokol-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SIMULASI BROWSER */
+
+.browser-simulasi {
+    margin-top: 25px;
+    padding: 25px;
+    background: #eef6ff;
+    border-radius: 15px;
+}
+
+.browser-simulasi label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-browser {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input-browser input {
+    flex: 1;
+    min-width: 180px;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.input-browser button {
+    padding: 13px 20px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input-browser button:hover {
+    background: #0369a1;
+}
+
+.hasil-simulasi {
+    margin-top: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.hasil-simulasi h3 {
+    color: #075985;
+    margin-bottom: 15px;
+}
+
+.hasil-simulasi ol {
+    padding-left: 22px;
+}
+
+.hasil-simulasi li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.hasil-simulasi li strong {
+    color: #075985;
+}
+
+@media (max-width: 600px) {
+    .input-browser {
+        flex-direction: column;
+    }
+
+    .input-browser button {
+        width: 100%;
+    }
+}
+
+/* KEAMANAN INTERNET */
+
+.keamanan-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.keamanan-card {
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #dbe3ed;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.keamanan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.keamanan-card h3 {
+    color: #075985;
+    margin-bottom: 12px;
+}
+
+.keamanan-card p {
+    line-height: 1.7;
+}
+
+.keamanan-card small {
+    display: block;
+    margin-top: 12px;
+    color: #0284c7;
+}
+
+.tips-keamanan {
+    margin-top: 30px;
+    padding: 25px;
+    background: #eef6ff;
+    border-radius: 12px;
+}
+
+.tips-keamanan h3 {
+    color: #075985;
+    margin-bottom: 15px;
+}
+
+.tips-keamanan ul {
+    padding-left: 25px;
+}
+
+.tips-keamanan li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .keamanan-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FITUR PENCARIAN */
+
+.pencarian-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pencarian-box input {
+    flex: 1;
+    min-width: 200px;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.pencarian-box button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0284c7;
+    color: white;
+    cursor: pointer;
+}
+
+.pencarian-box button:hover {
+    background: #0369a1;
+}
+
+#tombol-reset {
+    background: #475569;
+}
+
+#hasil-pencarian {
+    margin-top: 15px;
+    color: #075985;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .pencarian-box {
+        flex-direction: column;
+    }
+
+    .pencarian-box button {
+        width: 100%;
+    }
+}
+
+/* NAVIGASI AKTIF */
+
+nav a {
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+nav a.aktif {
+    color: #38bdf8;
+    border-bottom: 3px solid #38bdf8;
+}
+
+/* TOMBOL KEMBALI KE ATAS */
+
+#tombol-atas {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #0284c7;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#tombol-atas:hover {
+    background: #0369a1;
+}
+
+/* =================================
+   RESPONSIVE WEBSITE
+   ================================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .komponen-container,
+    .protokol-container,
+    .keamanan-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main {
+        padding: 20px;
+    }
+
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+
+    /* Header */
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    /* Navigasi */
+    nav {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        flex-shrink: 0;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    /* Konten utama */
+    main {
+        padding: 12px;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    section h2 {
+        font-size: 21px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    /* Kartu materi */
+    .tokoh-container,
+    .komponen-container,
+    .protokol-container,
+    .keamanan-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tokoh-card,
+    .komponen-card,
+    .protokol-card,
+    .keamanan-card {
+        width: 100%;
+    }
+
+    /* Diagram jaringan */
+    .perangkat-jaringan {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .diagram-jaringan {
+        padding: 15px;
+    }
+
+    /* Pencarian */
+    .pencarian-box {
+        flex-direction: column;
+    }
+
+    .pencarian-box input,
+    .pencarian-box button {
+        width: 100%;
+    }
+
+    /* Simulasi browser */
+    .input-browser {
+        flex-direction: column;
+    }
+
+    .input-browser input,
+    .input-browser button {
+        width: 100%;
+    }
+
+    /* Tombol kembali ke atas */
+    #tombol-atas {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
